@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "PicSaving",
+    "description": "Saving pic by url in AWS bucket",
+    "permissions": [
+        "tabs",
+        "contextMenus"
+    ],
+    "version": "0.0.1",
+    "background": {
+        "service_worker": "/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "/content.js"
+            ]
+        }
+    ]
+}
